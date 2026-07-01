@@ -1,0 +1,283 @@
+/* OperatorSidebar.css */
+.operator-sidebar {
+  background: #ffffff;
+  border-right: 1px solid #f0f0f0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  height: 80vh;
+  top: 10%;
+  left: 0.5%;
+  z-index: 1000;
+  transition: all 0.2s ease;
+  border-radius: 20px;
+}
+
+.operator-sidebar.ant-layout-sider-collapsed {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+/* Header Section */
+.sidebar-header {
+  padding: 2vh 1.5vh 1.5vh;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.2vh;
+}
+
+.logo-icon {
+  width: 3.2vh;
+  height: 3.2vh;
+  background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+  border-radius: 0.8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.6vh;
+}
+
+.logo-text {
+  font-size: 2vh;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.05vh;
+}
+
+.collapse-btn {
+  color: #8c8c8c;
+  border: none;
+  box-shadow: none;
+  padding: 0.4vh;
+  width: 3.2vh;
+  height: 3.2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6vh;
+  transition: all 0.2s ease;
+}
+
+.collapse-btn:hover {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+}
+
+.menu-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-label {
+  font-size: 1.4vh;
+  font-weight: 400;
+}
+
+.menu-badge {
+  font-size: 1.2vh;
+  color: #8c8c8c;
+  background: #f0f0f0;
+  padding: 0.2vh 0.8vh;
+  border-radius: 1.2vh;
+  font-weight: 500;
+}
+
+.menu-badge.active {
+  background: #f6ffed;
+  color: #52c41a;
+}
+
+/* Navigation Menu */
+.navigation-section {
+  flex: 1;
+  padding: 1.6vh 0;
+  overflow-y: auto;
+}
+
+.navigation-menu {
+  border: none;
+  background: transparent;
+}
+
+.navigation-menu .ant-menu-item {
+  margin: 0.4vh 1.2vh;
+  border-radius: 0.8vh;
+  height: 4.8vh;
+  line-height: 4.8vh;
+  transition: all 0.2s ease;
+}
+
+.navigation-menu .ant-menu-item:hover {
+  background-color: #f5f5f5;
+}
+
+.navigation-menu .ant-menu-item-selected {
+  background-color: #f6ffed;
+  color: #52c41a;
+}
+
+.navigation-menu .ant-menu-item-selected::after {
+  display: none;
+}
+
+.navigation-menu .ant-menu-item-icon {
+  font-size: 1.6vh;
+  margin-right: 1.2vh;
+}
+
+/* Bottom Section */
+.sidebar-bottom {
+  padding: 1.6vh;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.mobile-overlay.show {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .operator-sidebar {
+    width: 30vh;
+    min-width: 30vh;
+    max-width: 30vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .operator-sidebar {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    width: 28vh;
+    min-width: 28vh;
+    max-width: 28vh;
+    border-radius: 0;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .operator-sidebar.mobile-open {
+    left: 0;
+  }
+
+  .mobile-overlay {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .mobile-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .sidebar-header {
+    padding: 1.6vh 1.2vh 1.2vh;
+  }
+
+  .logo-text {
+    font-size: 1.8vh;
+  }
+
+  .logo-icon {
+    width: 2.8vh;
+    height: 2.8vh;
+    font-size: 1.4vh;
+  }
+
+  .navigation-menu .ant-menu-item {
+    margin: 0.3vh 1vh;
+    height: 4.2vh;
+    line-height: 4.2vh;
+  }
+
+  .navigation-menu .ant-menu-item-icon {
+    font-size: 1.4vh;
+    margin-right: 1vh;
+  }
+
+  .menu-label {
+    font-size: 1.3vh;
+  }
+
+  .menu-badge {
+    font-size: 1.1vh;
+    padding: 0.1vh 0.6vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .operator-sidebar {
+    width: 26vh;
+    min-width: 26vh;
+    max-width: 26vh;
+  }
+
+  .sidebar-header {
+    padding: 1.4vh 1vh 1vh;
+  }
+
+  .logo-text {
+    font-size: 1.6vh;
+  }
+
+  .logo-icon {
+    width: 2.4vh;
+    height: 2.4vh;
+    font-size: 1.2vh;
+  }
+
+  .navigation-menu .ant-menu-item {
+    margin: 0.2vh 0.8vh;
+    height: 3.8vh;
+    line-height: 3.8vh;
+  }
+
+  .navigation-menu .ant-menu-item-icon {
+    font-size: 1.2vh;
+    margin-right: 0.8vh;
+  }
+
+  .menu-label {
+    font-size: 1.2vh;
+  }
+
+  .menu-badge {
+    font-size: 1vh;
+    padding: 0.1vh 0.4vh;
+  }
+}

@@ -1,0 +1,56 @@
+.session-fee-result {
+  margin-top: 2vh;
+  padding: 1.6vh;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 0.2vh 0.6vh rgba(15, 23, 42, 0.05);
+}
+
+.session-fee-result h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1.2vh 0;
+}
+
+.session-fee-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vh;
+}
+
+.session-fee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.session-fee-item:last-child {
+  border-bottom: none;
+}
+
+.session-fee-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.session-fee-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.session-fee-message {
+  margin-top: 1.2vh;
+  padding: 0.8vh 1.2vh;
+  background: #d1fae5;
+  border-radius: 8px;
+  border: 1px solid #a7f3d0;
+  font-size: 13px;
+  color: #065f46;
+  font-weight: 500;
+}

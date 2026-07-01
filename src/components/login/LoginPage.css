@@ -1,0 +1,282 @@
+/* Login Page Styles */
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Override Ant Design default styles */
+.login-container .ant-typography {
+  margin-bottom: 0;
+}
+
+.login-container .ant-typography h1,
+.login-container .ant-typography h2,
+.login-container .ant-typography h3 {
+  margin-bottom: 0;
+}
+
+/* Left Promotional Section */
+.promotional-section {
+  flex: 2;
+  background-color: #16a34a;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.promotional-content {
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 2.5rem 2rem;
+  max-width: 52vh;
+}
+
+.promotional-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(22, 163, 74, 0.6);
+  margin-bottom: 1.25rem;
+}
+
+.promotional-section .promotional-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.promotional-section .promotional-description {
+  color: white;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.promotional-section .copyright {
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+/* Right Login Form Section */
+.login-form-section {
+  flex: 1;
+  background: #fafafa;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem;
+  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 460px;
+  padding-bottom: 2rem;
+}
+
+.login-form-section .brand-title {
+  color: #1f2937;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-form-section .welcome-title {
+  color: #1f2937;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Signup prompt styles */
+.login-form-section .signup-prompt {
+  color: #6b7280;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.login-form-section .signup-link {
+  color: #1f2937;
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-form-section .signup-link:hover {
+  color: #374151;
+}
+
+/* Forgot password styles */
+.login-form-section .forgot-password {
+  text-align: center;
+}
+
+.login-form-section .forgot-password .ant-typography {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.login-form-section .forgot-link {
+  color: #1f2937;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Form Styles */
+.login-form {
+  margin-bottom: 1.5rem;
+}
+
+.login-form .login-input {
+  border: none;
+  border-bottom: 0.2vh solid #e5e7eb;
+  border-radius: 0;
+  padding: 0.75rem 0;
+  background: transparent;
+  font-size: 1rem;
+}
+
+.login-form .login-input:focus {
+  border-bottom-color: #1f2937;
+  box-shadow: none;
+}
+
+.login-form .login-input .ant-input-prefix {
+  color: #9ca3af;
+  margin-right: 0.75rem;
+}
+
+.login-form .login-button {
+  border: none;
+  height: 4.8vh;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.8vh;
+  margin-top: 1rem;
+  background: #1f2937;
+}
+
+/* Override Ant Design disabled styles so text vẫn rõ ràng */
+.login-form .login-button.ant-btn[disabled],
+.login-form .login-button.ant-btn[disabled]:hover,
+.login-form .login-button.ant-btn[disabled]:focus {
+  background: #1f2937;
+  color: #e5e7eb;
+  opacity: 0.6;
+  cursor: not-allowed;
+  border: none;
+  box-shadow: none;
+}
+
+/* Google Login Button */
+.login-form-section .google-login-button {
+  height: 4.8vh;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 0.2vh solid #e5e7eb;
+  border-radius: 0.8vh;
+  color: #1f2937;
+  background: white;
+  margin-bottom: 1.5rem;
+}
+
+.login-form-section .google-login-button:hover {
+  border-color: #d1d5db;
+  background: #f9fafb;
+}
+
+.login-form-section .google-login-button .anticon {
+  margin-right: 0.5rem;
+}
+
+/* Divider */
+.login-form-section .divider {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.login-form-section .divider::before,
+.login-form-section .divider::after {
+  border-color: #e5e7eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .promotional-section {
+    flex: 1;
+    height: 50vh;
+    min-height: 50vh;
+  }
+
+  .login-form-section {
+    flex: 1;
+    height: auto;
+    min-height: 50vh;
+    padding: 1.5rem;
+  }
+
+  .promotional-section .promotional-title {
+    font-size: 2rem;
+  }
+
+  .promotional-section .promotional-description {
+    font-size: 1rem;
+  }
+
+  .login-form-section .brand-title {
+    font-size: 2rem;
+  }
+
+  .login-form-section .welcome-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotional-content {
+    padding: 1rem;
+  }
+
+  .login-form-container {
+    padding: 0.5rem;
+  }
+
+  .promotional-section .promotional-title {
+    font-size: 1.5rem;
+  }
+
+  .login-form-section .brand-title {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,285 @@
+.admin-header {
+  background: #ffffff;
+  padding: 0 2.4vh;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6.4vh;
+  margin: 1.6vh 1.6vh 0 1.6vh;
+  border-radius: 10px;
+  box-shadow: 0 0.1vh 0.3vh rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-action-btn {
+  color: #8c8c8c;
+  border: none;
+  background: transparent;
+  width: 4vh;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8vh;
+  transition: all 0.2s ease;
+}
+
+.header-action-btn:hover {
+  color: #1890ff;
+  background: #f0f8ff;
+}
+
+.user-menu-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.8vh 1.2vh;
+  border-radius: 0.8vh;
+  border: 1px solid #f0f0f0;
+  background: #ffffff;
+  color: #1a1a1a;
+  transition: all 0.2s ease;
+  height: 4.8vh;
+}
+
+.user-menu-btn:hover {
+  border-color: #d9d9d9;
+  box-shadow: 0 0.2vh 0.8vh rgba(0, 0, 0, 0.06);
+}
+
+.ant-breadcrumb {
+  font-size: 1.4vh;
+}
+
+.ant-breadcrumb a {
+  color: #8c8c8c;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ant-breadcrumb a:hover {
+  color: #1890ff;
+}
+
+.ant-breadcrumb .ant-breadcrumb-link {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.ant-breadcrumb .ant-breadcrumb-separator {
+  color: #d9d9d9;
+  margin: 0 0.8vh;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.4vh;
+  color: #1a1a1a;
+  cursor: pointer;
+  padding: 0.8vh;
+  border-radius: 0.6vh;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background-color: #f5f5f5;
+  color: #667eea;
+}
+
+/* Notification Button */
+.notification-btn {
+  font-size: 2.2vh;
+}
+
+/* Notification Dropdown Menu overrides */
+.ant-dropdown .ant-dropdown-menu {
+  width: 36vh;
+  padding: 0.6vh;
+  border-radius: 1vh;
+  box-shadow: 0 0.6vh 2vh rgba(0, 0, 0, 0.08);
+}
+
+.ant-dropdown .ant-dropdown-menu-item {
+  padding: 1.2vh 1.4vh;
+  border-radius: 0.8vh;
+}
+
+.ant-dropdown .ant-dropdown-menu-item:hover {
+  background: #f7f9fc;
+}
+
+.notification-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-item-title {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.5vh;
+}
+
+.notification-item-time {
+  color: #8c8c8c;
+  font-size: 1.2vh;
+  margin-top: 0.3vh;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-header {
+    padding: 0 2vh;
+    height: 5.5vh;
+    margin: 1.2vh 1.2vh 0 1.2vh;
+  }
+
+  .header-left h3 {
+    font-size: 1.8vh;
+  }
+
+  .user-menu-btn {
+    padding: 0.6vh 1vh;
+    font-size: 1.3vh;
+    height: 4.2vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    padding: 0 1.6vh;
+    height: 5vh;
+    margin: 0.8vh 0.8vh 0 0.8vh;
+    position: relative;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    order: -1;
+    margin-right: 1.6vh;
+  }
+
+  .header-left h3 {
+    font-size: 1.6vh;
+    flex: 1;
+  }
+
+  .user-menu-btn {
+    padding: 0.4vh 0.8vh;
+    font-size: 1.2vh;
+    height: 3.8vh;
+  }
+
+  .user-menu-btn .ant-avatar {
+    width: 2.4vh;
+    height: 2.4vh;
+    margin-right: 0.6vh;
+  }
+
+  .ant-dropdown .ant-dropdown-menu {
+    width: 30vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-header {
+    padding: 0 1.2vh;
+    height: 4.5vh;
+    margin: 0.6vh 0.6vh 0 0.6vh;
+  }
+
+  .header-left h3 {
+    font-size: 1.4vh;
+  }
+
+  .user-menu-btn {
+    padding: 0.3vh 0.6vh;
+    font-size: 1.1vh;
+    height: 3.4vh;
+  }
+
+  .user-menu-btn span {
+    display: none;
+  }
+
+  .user-menu-btn .ant-avatar {
+    width: 2vh;
+    height: 2vh;
+    margin-right: 0;
+  }
+}
+
+/* Áp dụng cho List.Item (className={item.className}) */
+.ant-list-item.notification-item-unread {
+  /* Nền màu xanh nhạt để highlight */
+  background-color: #f0f8ff !important;
+  /* Thanh dọc bên trái */
+  border-left: 4px solid #1890ff;
+  /* Đẩy nội dung vào để nhường chỗ cho thanh dọc */
+  padding-left: 8px !important;
+  transition:
+    background-color 0.3s ease,
+    border-left 0.3s ease;
+}
+
+/* 2. Cấu trúc nội dung Notification */
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start; /* Căn chỉnh lên trên */
+}
+
+/* Wrapper cho Tiêu đề và Chấm Đỏ */
+.notification-item-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1; /* Cho phép nó mở rộng */
+}
+
+/* 3. Tinh chỉnh Tiêu đề cho mục chưa đọc */
+.notification-item-unread .notification-item-title {
+  color: #1890ff; /* Tiêu đề màu xanh nổi bật */
+  font-weight: 700; /* Làm đậm hơn */
+}
+
+/* 4. Chấm Đỏ (Unread dot) */
+.unread-dot {
+  width: 6px; /* Kích thước chấm nhỏ hơn */
+  height: 6px;
+  background-color: #ff4d4f;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* 5. Tinh chỉnh thời gian */
+.notification-item-time {
+  color: #8c8c8c;
+  font-size: 1.2vh;
+  margin-top: 0.3vh;
+  flex-shrink: 0; /* Đảm bảo thời gian luôn hiển thị */
+}
+
+/* Overrides cho List.Item của Ant Design (Nếu cần thiết) */
+.ant-list-item {
+  /* Đảm bảo border-bottom luôn rõ ràng giữa các item */
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* Tinh chỉnh cho phần footer chứa nút "Đọc tất cả" */
+.ant-list-footer {
+  padding: 0;
+}

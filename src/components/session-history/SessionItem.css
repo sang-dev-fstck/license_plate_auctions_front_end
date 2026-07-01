@@ -1,0 +1,398 @@
+.session-item {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 1.8vh 4.5vh rgba(15, 23, 42, 0.12);
+  transition:
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s ease;
+  position: relative;
+}
+
+.session-item:hover {
+  box-shadow:
+    0 2.8vh 7vh rgba(15, 23, 42, 0.22),
+    0 0 0 0.1vh rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.8);
+}
+
+.session-item-header {
+  padding: 2vh 2.4vh;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-bottom: 1px dashed #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vh;
+  flex-wrap: wrap;
+}
+
+.session-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2vh;
+}
+
+.session-item-title-section {
+  display: flex;
+  align-items: center;
+  gap: 1.2vh;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.session-plate-badge {
+  padding: 0.6vh 1.2vh;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 0.2vh 0.6vh rgba(30, 58, 138, 0.3);
+}
+
+.session-status-badge {
+  padding: 0.6vh 1.2vh;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6vh;
+  color: #f9fafb;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.session-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.session-status-badge.status-completed {
+  background: rgba(16, 185, 129, 0.9);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.session-status-badge.status-completed .session-status-dot {
+  background: #22c55e;
+  box-shadow: 0 0 0.8vh rgba(34, 197, 94, 0.6);
+}
+
+.session-status-badge.status-in-progress {
+  background: rgba(59, 130, 246, 0.9);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.session-status-badge.status-in-progress .session-status-dot {
+  background: #3b82f6;
+  box-shadow: 0 0 0.8vh rgba(59, 130, 246, 0.6);
+}
+
+.session-status-badge.status-active {
+  background: rgba(245, 158, 11, 0.9);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.session-status-badge.status-active .session-status-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 0.8vh rgba(245, 158, 11, 0.6);
+}
+
+.session-status-badge.status-pending {
+  background: rgba(139, 92, 246, 0.9);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.session-status-badge.status-pending .session-status-dot {
+  background: #8b5cf6;
+  box-shadow: 0 0 0.8vh rgba(139, 92, 246, 0.6);
+}
+
+.session-status-badge.status-cancelled {
+  background: rgba(107, 114, 128, 0.9);
+  border-color: rgba(107, 114, 128, 0.3);
+}
+
+.session-status-badge.status-cancelled .session-status-dot {
+  background: #6b7280;
+  box-shadow: 0 0 0.8vh rgba(107, 114, 128, 0.6);
+}
+
+.session-payment-badge {
+  padding: 0.4vh 1vh;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.session-payment-badge.payment-paid {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #065f46;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.session-payment-badge.payment-unpaid {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+  color: #92400e;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.session-payment-badge.payment-pending {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  color: #3730a3;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.session-view-images-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6vh;
+  padding: 0.6vh 1.2vh;
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 0.2vh 0.6vh rgba(107, 114, 128, 0.3);
+}
+
+.session-view-images-btn:hover {
+  box-shadow: 0 0.4vh 1.2vh rgba(107, 114, 128, 0.4);
+}
+
+.session-view-details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6vh;
+  padding: 0.6vh 1.2vh;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 0.2vh 0.6vh rgba(59, 130, 246, 0.3);
+}
+
+.session-view-details-btn:hover {
+  box-shadow: 0 0.4vh 1.2vh rgba(59, 130, 246, 0.4);
+}
+
+.session-checkout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6vh;
+  padding: 0.6vh 1.2vh;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 0.2vh 0.6vh rgba(16, 185, 129, 0.3);
+}
+
+.session-checkout-btn:hover {
+  box-shadow: 0 0.4vh 1.2vh rgba(16, 185, 129, 0.4);
+}
+
+.session-item-body {
+  padding: 2vh 2.4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6vh;
+}
+
+.session-time-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.6vh;
+}
+
+.session-time-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2vh;
+  padding: 1.2vh;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.session-time-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.session-time-icon.check-in {
+  color: #3b82f6;
+}
+
+.session-time-icon.check-out {
+  color: #6b7280;
+}
+
+.session-time-label {
+  display: block;
+  font-size: 11px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.2vh;
+}
+
+.session-time-value {
+  display: block;
+  font-size: 14px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.session-payment-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2vh;
+  padding: 1.6vh;
+  background: linear-gradient(135deg, #f8fbff 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.session-payment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vh;
+}
+
+.session-payment-label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.session-payment-value {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.session-payment-value.paid {
+  color: #059669;
+}
+
+.session-payment-value.unpaid {
+  color: #f59e0b;
+}
+
+.session-payment-value.total {
+  color: #111827;
+  font-size: 16px;
+}
+
+.session-subscription-info {
+  padding: 1.6vh;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 12px;
+  border: 1px solid #fbbf24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.session-subscription-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8vh;
+  padding: 1vh 1.6vh;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #78350f;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 0.2vh 0.6vh rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.session-subscription-icon {
+  font-size: 18px;
+  color: #78350f;
+}
+
+.session-reservation-info {
+  padding: 1.6vh;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-radius: 12px;
+  border: 1px solid #60a5fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.session-reservation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8vh;
+  padding: 1vh 1.6vh;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 0.2vh 0.6vh rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.session-reservation-icon {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .session-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .session-view-images-btn,
+  .session-view-details-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .session-time-info {
+    grid-template-columns: 1fr;
+  }
+
+  .session-payment-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .session-plate-badge {
+    font-size: 14px;
+  }
+}
