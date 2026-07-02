@@ -17,6 +17,6 @@ export const api = createApi({
     }
   }),
 
-  tagTypes: ["SessionDetail", "BidHistory"],
+  tagTypes: ["SessionDetail", "BidHistory", "AuctionSessions"],
   endpoints: () => ({}),
 });

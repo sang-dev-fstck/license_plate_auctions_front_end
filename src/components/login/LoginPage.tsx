@@ -25,7 +25,7 @@ const Login: React.FC = () => {
       const response = await login(values).unwrap() as LoginResponse;
       await refreshCsrfToken();
       message.success(response.message);
-      navigate("/auction-sessions/6a165f974b18e5349b1996d1");
+      navigate("/auction-sessions");
     } catch (error: unknown) {
       const err = error as ErrrorResponse;
       message.error(err.data.message);
