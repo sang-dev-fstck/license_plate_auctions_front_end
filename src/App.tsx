@@ -2,12 +2,9 @@ import { Route, Routes } from 'react-router-dom'
 import routes from './routes/routes'
 import PermissionCheck from './components/permission/PermissionCheck'
 import NotFound from './components/not-found/NotFound'
-import { useAutoLogout } from './hooks/useAutoLogout'
 import { Suspense } from 'react'
 import { Spin } from 'antd'
 function App() {
-  useAutoLogout()
-
   return (
     <Suspense
       fallback={

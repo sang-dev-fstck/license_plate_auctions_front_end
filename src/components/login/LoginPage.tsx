@@ -10,21 +10,25 @@ type LoginFormValues = {
 type LoginResponse = {
   message?: string
 }
+interface ErrrorResponse {
+  data: {
+    message?: string
+  }
+}
 const Login: React.FC = () => {
   const navigate = useNavigate();
   const [login, { isLoading }] = useLoginMutation();
 
   const handleSubmit = async (values: LoginFormValues) => {
     try {
-      const reponse = await refreshCsrfToken();
-      console.log(reponse);
+      await refreshCsrfToken();
       const response = await login(values).unwrap() as LoginResponse;
       await refreshCsrfToken();
       message.success(response.message);
       navigate("/auction-sessions/6a165f974b18e5349b1996d1");
-    } catch (error) {
-      console.error(error);
-      message.error("Login failed");
+    } catch (error: unknown) {
+      const err = error as ErrrorResponse;
+      message.error(err.data.message);
     }
   };
 
