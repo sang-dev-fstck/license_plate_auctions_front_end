@@ -13,7 +13,7 @@ const routes: LayoutRoute[] = [
     layout: MainLayout,
     data: [
       {
-        path: '/login',
+        path: '/',
         component: LoginPage,
       },
       {
