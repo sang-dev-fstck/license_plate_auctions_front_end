@@ -28,7 +28,7 @@ import {
 const { RangePicker } = DatePicker;
 const { Text, Title } = Typography;
 
-type CustomerTabStatus = "ACTIVE" | "ENDING" | "SCHEDULED" | "PAUSED" | "ENDED";
+type CustomerTabStatus = "ACTIVE" | "SCHEDULED" | "PAUSED" | "ENDED";
 type SortOption = {
     label: string;
     value: string;
@@ -39,7 +39,6 @@ type SortOption = {
 const STATUS_TABS: { label: string; value: CustomerTabStatus }[] = [
     { label: "Upcoming", value: "SCHEDULED" },
     { label: "Active", value: "ACTIVE" },
-    { label: "Ending", value: "ENDING" },
     { label: "Paused", value: "PAUSED" },
     { label: "Ended", value: "ENDED" },
 ];
