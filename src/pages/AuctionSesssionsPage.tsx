@@ -123,7 +123,7 @@ const AuctionSessionsPage: React.FC = () => {
     const [dateRange, setDateRange] = useState<RangePickerProps["value"]>(null);
     const [sortValue, setSortValue] = useState(SORT_OPTIONS[0].value);
     const [page, setPage] = useState(0);
-    const [size, setSize] = useState(10);
+    const [size, setSize] = useState(6);
 
     const activeSort = SORT_OPTIONS.find((option) => option.value === sortValue) ?? SORT_OPTIONS[0];
 
