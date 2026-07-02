@@ -37,9 +37,9 @@ type SortOption = {
 };
 
 const STATUS_TABS: { label: string; value: CustomerTabStatus }[] = [
+    { label: "Upcoming", value: "SCHEDULED" },
     { label: "Active", value: "ACTIVE" },
     { label: "Ending", value: "ENDING" },
-    { label: "Upcoming", value: "SCHEDULED" },
     { label: "Paused", value: "PAUSED" },
     { label: "Ended", value: "ENDED" },
 ];
@@ -117,7 +117,7 @@ function getCtaLabel(status: AuctionSessionStatus) {
 
 const AuctionSessionsPage: React.FC = () => {
     const navigate = useNavigate();
-    const [activeStatus, setActiveStatus] = useState<CustomerTabStatus>("ACTIVE");
+    const [activeStatus, setActiveStatus] = useState<CustomerTabStatus>("SCHEDULED");
     const [plateNumber, setPlateNumber] = useState("");
     const [plateSearch, setPlateSearch] = useState("");
     const [dateRange, setDateRange] = useState<RangePickerProps["value"]>(null);
